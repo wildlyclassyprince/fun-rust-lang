@@ -37,7 +37,7 @@ fn rust_arrays() {
 
 fn invalid_array_access() {
     // If user provides a value larger than the array's index, the program with panic and exit.
-    
+
     let a = [1, 2, 3, 4, 5];
 
     println!("Please enter an array index.");

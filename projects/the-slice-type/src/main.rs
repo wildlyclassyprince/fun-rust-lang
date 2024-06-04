@@ -6,7 +6,10 @@ fn main() {
     let word1 = first_word(&s1);
     let word2 = first_word(&s2);
 
-    println!("First word (with space): {}\nFirst word (without spaces): {}", word1, word2);
+    println!(
+        "First word (with space): {}\nFirst word (without spaces): {}",
+        word1, word2
+    );
 }
 
 fn first_word(s: &str) -> &str {

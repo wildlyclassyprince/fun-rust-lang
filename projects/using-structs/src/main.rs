@@ -25,9 +25,12 @@ fn main() {
         ..user2 // Cannot use user1 here because data was moved to user2
     };
     println!(
-        "\nactivity: {}\nusername: {}\nemail: {}\ncounter: {}",
+        "\nactivity: {}\nusername: {}\nemail: {}\ncounter: {}\n",
         user3.active, user3.username, user3.email, user3.sign_in_count
     );
+
+    // Tuple structs
+    point_and_color();
 }
 
 struct User {
@@ -44,4 +47,15 @@ fn build_user(email: String, username: String) -> User {
         email,
         sign_in_count: 1,
     }
+}
+
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
+fn point_and_color() {
+    println!("Tuple structs:");
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
+    println!("Color: ({}, {}, {})", black.0, black.1, black.2);
+    println!("Point: ({}, {}, {})", origin.0, origin.1, origin.2);
 }

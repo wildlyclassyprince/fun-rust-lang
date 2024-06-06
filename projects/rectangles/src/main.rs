@@ -1,10 +1,11 @@
 fn main() {
+    let rectangle = (5, 10);
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(5, 10)
+        area(rectangle)
     );
 }
 
-fn area(length: u32, width: u32) -> u32 {
-    length * width
+fn area(dimensions: (u32, u32)) -> u32 {
+    dimensions.0 * dimensions.1
 }

@@ -1,11 +1,26 @@
 fn main() {
-    let rectangle = (5, 10);
+    let rectangle = Rectangle {
+        length: 10,
+        width: 5,
+    };
     println!(
         "The area of the rectangle is {} square pixels.",
-        area(rectangle)
+        area(&rectangle)
     );
+
+    // Debugging
+    println!("\nRectangle: {:#?}", &rectangle);
+
+    // Takes ownership of an expression, as opposed to println! which takes a reference
+    dbg!(&rectangle);
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
-    dimensions.0 * dimensions.1
+#[derive(Debug)] //needs to implemented above the object we want to debug
+struct Rectangle {
+    length: u32,
+    width: u32,
+}
+
+fn area(dimensions: &Rectangle) -> u32 {
+    dimensions.length * dimensions.width
 }

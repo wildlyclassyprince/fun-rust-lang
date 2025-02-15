@@ -16,5 +16,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Build
-        run: cd projects/hello-world && cargo run
+      - name: run_hello_cargo
+        run: cd projects/hello_cargo && cargo run

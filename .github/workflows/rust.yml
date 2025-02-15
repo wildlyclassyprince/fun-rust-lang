@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build projects/hello-world --verbose
+      - uses: actions/checkout@v4
+      - name: Build
+        run: cd projects/hello-world && cargo run

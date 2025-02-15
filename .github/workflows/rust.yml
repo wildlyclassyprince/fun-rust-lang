@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build projects/hell-world --verbose
+      run: cargo build projects/hello-world --verbose

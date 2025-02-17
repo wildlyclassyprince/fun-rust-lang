@@ -5,11 +5,11 @@ mod front_of_house {
 }
 
 pub fn eat_at_restaurant() {
-    // Absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
+    // Absolute path with 'use' and 'as'
+    use crate::front_of_house::hosting as my_hosting;
 
     // Relative path
-    front_of_house::hosting::add_to_waitlist();
+    my_hosting::add_to_waitlist();
 
     // Testing use of super - absolute path
     crate::back_of_house::fix_incorrect_order();
